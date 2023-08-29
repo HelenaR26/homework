@@ -25,3 +25,13 @@ if (num215 > 300) {
 } else {
     console.log('code goes to the else')
 }
+
+// ternary operator
+             (num215 >= 200) ? console.log('ternary true') : 
+             (num215 >= 250) ? console.log('ternary greater than 250') : 
+             console.log('ternary false') 
+
+        let resTernary = (num215 >= 200) ? 'ternary true' : 
+             (num215 >= 250) ? 'ternary greater than 250' : 
+             'ternary false'
+             console.log(resTernary)
