@@ -1,6 +1,6 @@
 {
-    "name" : "Elena",
-    "lname" : "Rydvan",
-    "age" : 28,
-    "city" : "Odessa"
+  "name": "John",
+  "lname": "Smith",
+  "age": 100500,
+  "city": "NY"
 }
