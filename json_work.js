@@ -1,4 +1,5 @@
-const values = require('./values.json')
+// const values = require('./values.json')
+const fs = require('fs-extra')
 
 // let obj1 = {name: "Elena", lname: "Rydvan", age: 28}
 // console.log(obj1)
@@ -18,31 +19,32 @@ const values = require('./values.json')
 
 // jsonObj1 = JSON.stringify(obj2)
 // console.log(jsonObj1)
-console.log(values)
+// console.log(values)
 
 
 
-const { writeFile, readFile } = require('fs');
-const path = './values.json'
-const newData = {phone : 12313, address : 'Street'}
-readFile(path, (error, data) => {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  const parsedData = JSON.parse(data);
-  parsedData.createdAt = new Date().toISOString();
-  writeFile(path, JSON.stringify(parsedData, null, 2), (err) => {
-    if (err) {
-      console.log('Failed to write updated data to file');
-      return;
-    }
-    console.log('Updated file successfully');
-  });
-});
+
+// const { writeFile, readFile } = require('fs');
+// const path = './values.json'
+// const newData = {phone : 12313, address : 'Street'}
+// readFile(path, (error, data) => {
+//   if (error) {
+//     console.log(error);
+//     return;
+//   }
+//   const parsedData = JSON.parse(data);
+//   parsedData.createdAt = new Date().toISOString();
+//   writeFile(path, JSON.stringify(parsedData, null, 2), (err) => {
+//     if (err) {
+//       console.log('Failed to write updated data to file');
+//       return;
+//     }
+//     console.log('Updated file successfully');
+//   });
+// });
 
 // const values = require('./values.json')
-// const fs = require('fs-extra')
+
 // let jsonObj1 = '{"name" : "den", "lname" : "pavliuk", "age" : 100500}'
 // let obj2 = JSON.parse(jsonObj1)
 // console.log(obj2.name)
@@ -84,7 +86,7 @@ readFile(path, (error, data) => {
 
 
 // const fs = require('fs-extra');
-// let path = "./values6.json";
+// let path = "./values.json";
 // let data, jsonData;
 // try {
 //     if(fs.existsSync(path)) {
@@ -107,3 +109,25 @@ readFile(path, (error, data) => {
 // } catch (err) {
 //     console.error(err.message);
 // }
+
+// const fs = require('fs-extra')
+// let path = "./values.json";
+// let ddd = JSON.parse(fs.readFileSync(path, 'utf-8'))
+// console.log(ddd)
+
+// ddd.newVal = 'Myval'
+
+// fs.writeFileSync(path, JSON.stringify(ddd))
+
+const fs = require('fs-extra')
+let path = "./values.json";
+
+async function func1() {
+  let ddd = await JSON.parse(fs.readFileSync(path, 'utf-8'))
+console.log(ddd)
+console.log('Hello from async function')
+ddd.dkd = 'DKD'
+await fs.writeFile(path, JSON.stringify(ddd))
+}
+
+func1()
