@@ -33,4 +33,4 @@ for (let i  = 0; i < baseArr.length; i++) {
 }
 console.log(resultWithUpperC)   
 }
-getOnlyString(arr1);
+getOnlyString(arr1)
