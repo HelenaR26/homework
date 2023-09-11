@@ -1,0 +1,18 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "package contains code for leaning JS",
+  "main": "json_work.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/HelenaR26/homework.git)"
+  },
+  "author": "Elena Rydvan",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  }
+}
