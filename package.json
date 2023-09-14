@@ -1,0 +1,8 @@
+{
+  "packageManager": "yarn@3.6.3",
+  "type": "module",
+  "devDependencies": {
+    "fs-extra": "^11.1.1",
+    "node-fetch": "^3.3.2"
+  }
+}
