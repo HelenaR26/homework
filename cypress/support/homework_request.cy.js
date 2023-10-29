@@ -17,3 +17,4 @@ describe('Login with API request', () => {
       cy.contains('New Position').should('be.visible')
     })
   })
+  
