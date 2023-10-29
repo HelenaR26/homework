@@ -101,3 +101,4 @@ Cypress.Commands.add('createCategoryAndPosition', (categoryName, positionName, p
 })
 
 
+
