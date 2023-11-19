@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import { faker } from "@faker-js/faker"
-
 // describe('Login with API request', () => {
 //   beforeEach(() => {
 //     cy.loginAndSetLocalStorage()
@@ -39,7 +38,7 @@ import { faker } from "@faker-js/faker"
 
 describe('login with api request', () => {
   const BaseUrl = Cypress.env('newbornUrl')
-    Cypress.config('baseUrl', BaseUrl)
+  Cypress.config('baseUrl', BaseUrl)
   beforeEach(() => {
     cy.loginAndSetLocalStorage();
   });
