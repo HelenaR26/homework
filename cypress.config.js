@@ -9,6 +9,7 @@ const { beforeRunHook, afterRunHook } = lib
 export default defineConfig({
   env: {
     newbornUrl: 'http://5.189.186.217',
+    guruTestingURL: 'https://www.guru99.com',
     mongodb: {
       uri: 'mongodb://127.0.0.1:27017',
       database: 'test',
@@ -32,12 +33,12 @@ export default defineConfig({
     // baseUrl: 'http://localhost:3000/',
     retries: {
       openMode: 1,
-      runMode: 1
+      runMode: 1,
     },
     // specPattern: 'cypress/e2e/myTests/*.cy.js',
     setupNodeEvents(on, config) {
-      on('task', {log(message) {console.log(message); return null }})
-      on('task', {saveUrl(url) {fs.writeFileSync('url.json', JSON.stringify(url)); return null }})
+      on('task', { log(message) { console.log(message); return null } })
+      on('task', { saveUrl(url) { fs.writeFileSync('url.json', JSON.stringify(url)); return null } })
       // const newUrl = config.env.urlFromCli || 'http://localhost:3000/'
       // const newUrl = config.env.urlFromCli
       // config.baseUrl = newUrl
@@ -61,7 +62,7 @@ export default defineConfig({
         console.log('override after:run');
         await afterRunHook();
       });
-   
+
       return config
     },
   },
