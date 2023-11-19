@@ -2,7 +2,10 @@
   "packageManager": "yarn@3.6.3",
   "type": "module",
   "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
     "cypress": "^13.3.3",
+    "cypress-mochawesome-reporter": "^3.6.1",
+    "cypress-mongodb": "^6.2.0",
     "fs-extra": "^11.1.1",
     "log4js": "^6.9.1",
     "node-fetch": "^3.3.2"
@@ -10,11 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --headed",
-    "cy:run_chrome": "cypress run --headless -b chrome --env urlFromCli=$ENV_URL",
-    "cy:run_chrome_headed": "cypress run --headed -b chrome --env urlFromCli=$ENV_URL"
-  },
-  "dependencies": {
-    "cypress-mongodb": "^6.2.0"
+    "cy:run_chrome": "cypress run --headless -b chrome",
+    "cy:run_chrome_headed": "cypress run --headed -b chrome"
   }
 }

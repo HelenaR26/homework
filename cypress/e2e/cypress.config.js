@@ -1,3 +1,13 @@
+// const { defineConfig } = require("cypress");
+
+// module.exports = defineConfig({
+//   e2e: {
+//     setupNodeEvents(on, config) {
+//       // implement node event listeners here
+//     },
+//   },
+// });
+
 import { defineConfig } from "cypress";
 import fs from "fs-extra";
 import { configurePlugin } from "cypress-mongodb";
@@ -8,13 +18,11 @@ const { beforeRunHook, afterRunHook } = lib
 
 export default defineConfig({
   env: {
-    newbornUrl: 'http://5.189.186.217',
     mongodb: {
       uri: 'mongodb://127.0.0.1:27017',
       database: 'test',
     },
   },
-  chromeWebSecurity: false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
@@ -28,7 +36,7 @@ export default defineConfig({
     viewportHeight: 900,
     viewportWidth: 1400,
     defaultCommandTimeout: 4000,
-    // baseUrl: 'https://5.189.186.217/',
+    // baseUrl: 'https://www.cypress.io',
     // baseUrl: 'http://localhost:3000/',
     retries: {
       openMode: 1,

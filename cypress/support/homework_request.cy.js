@@ -16,5 +16,11 @@ describe('Login with API request', () => {
       cy.wait(5000)
       cy.contains('New Position').should('be.visible')
     })
+
+    it('remove the category', () => {
+      cy.removeCategoryById()
+      cy.visit(`/categories/${categoryId}`)
+      .should('not.be.visible')
+    })
   })
   
