@@ -5,13 +5,8 @@ on: push
 jobs:
   chrome:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-      name: trigger in chrome
-      steps:
-=======
     name: trigger in chrome
     steps:
->>>>>>> a7b57323b8d95bd67a5e4a8023512f3005ec9295
       - uses: actions/checkout@v3
       - uses: cypress-io/github-action@v5
         with:
